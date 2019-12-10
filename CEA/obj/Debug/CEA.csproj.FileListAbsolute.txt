@@ -1,0 +1,99 @@
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\CEA.exe.config
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\CEA.exe
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\CEA.pdb
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.dll
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.xml
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.csprojResolveAssemblyReference.cache
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.Form1.resources
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.Properties.Resources.resources
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.csproj.GenerateResource.Cache
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.exe
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.pdb
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\Bunifu.Core.dll
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\obj\Debug\CEA.csproj.CEA.exe.config
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\System.Data.SQLite.dll
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\System.Data.SQLite.xml
+c:\users\serega\documents\visual studio 2015\Projects\CEA\CEA\bin\Debug\ComputerEquipmentAccounting.db
+D:\CEA\CEA\bin\Debug\CEA.exe.config
+D:\CEA\CEA\obj\Debug\CEA.exe
+D:\CEA\CEA\obj\Debug\CEA.pdb
+D:\CEA\CEA\bin\Debug\ComputerEquipmentAccounting.db
+D:\CEA\CEA\bin\Debug\CEA.exe
+D:\CEA\CEA\bin\Debug\CEA.pdb
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\CEA\CEA\bin\Debug\System.Data.SQLite.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+D:\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.xml
+D:\CEA\CEA\bin\Debug\System.Data.SQLite.xml
+D:\CEA\CEA\obj\Debug\CEA.csprojResolveAssemblyReference.cache
+D:\CEA\CEA\obj\Debug\CEA.FormMain.resources
+D:\CEA\CEA\obj\Debug\CEA.Properties.Resources.resources
+D:\CEA\CEA\obj\Debug\CEA.csproj.GenerateResource.Cache
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\CEA\CEA\bin\Debug\Dapper.dll
+D:\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\CEA\CEA\bin\Debug\Dapper.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\ComputerEquipmentAccounting.db
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\CEA.exe.config
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\CEA.exe
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\CEA.pdb
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Dapper.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\EasyHTMLReports.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\System.Data.SQLite.dll
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\Dapper.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\bin\Debug\System.Data.SQLite.xml
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.csprojResolveAssemblyReference.cache
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.FormMain.resources
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.Properties.Resources.resources
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.csproj.GenerateResource.Cache
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.exe
+C:\Users\Serega\Desktop\Практика\CEA\CEA\obj\Debug\CEA.pdb
