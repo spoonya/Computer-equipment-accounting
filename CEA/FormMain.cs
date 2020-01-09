@@ -31,7 +31,6 @@ namespace CEA
             CancellationFill();
             ProvidersFill();
             ProvidersListFill();
-            //EquipListFill();
         }
 
         private void OpenTrans()
@@ -88,7 +87,7 @@ namespace CEA
                     using (reader = cmd.ExecuteReader())
                         while (reader.Read())
                         {
-                            data.Add(new string[8]);
+                            data.Add(new string[10]);
 
                             data[data.Count - 1][0] = reader[0].ToString();
                             data[data.Count - 1][1] = reader[1].ToString();
@@ -97,6 +96,9 @@ namespace CEA
                             data[data.Count - 1][4] = reader[4].ToString();
                             data[data.Count - 1][5] = reader[5].ToString();
                             data[data.Count - 1][6] = reader[6].ToString();
+                            data[data.Count - 1][8] = reader[7].ToString();
+                            data[data.Count - 1][9] = Convert.ToString(
+                                Convert.ToInt32(reader[2].ToString()) * Convert.ToDouble(reader[7].ToString()));
                         }
                     //Получение имени поставщика по коду
                     for (int i = 0; i < data.Count; i++)
@@ -256,7 +258,7 @@ namespace CEA
         private void StaffListFill()
         {
             using (con = new SQLiteConnection(conStr))
-            using (cmd = new SQLiteCommand("SELECT NameEmployee, CodeEmployee FROM Staff ORDER BY CodeEmployee", con))
+            using (cmd = new SQLiteCommand("SELECT NameEmployee, CodeEmployee FROM Staff ORDER BY NameEmployee", con))
             {
                 if (ddNameStaffAlloc.Items.Count > 0) ddNameStaffAlloc.Items.Clear();
                 if (ddUpdNameStaffAlloc.Items.Count > 0) ddUpdNameStaffAlloc.Items.Clear();
@@ -286,7 +288,7 @@ namespace CEA
         private void EquipListFill()
         {
             using (con = new SQLiteConnection(conStr))
-            using (cmd = new SQLiteCommand("SELECT NameEquip, CodeEquip FROM Equipment ORDER BY CodeEquip", con))
+            using (cmd = new SQLiteCommand("SELECT NameEquip, CodeEquip FROM Equipment ORDER BY NameEquip", con))
             {
                 int n = pages.SelectedIndex;
 
@@ -338,7 +340,7 @@ namespace CEA
         private void ProvidersListFill()
         {
             using (con = new SQLiteConnection(conStr))
-            using (cmd = new SQLiteCommand("SELECT NameProvider, CodeProvider FROM Providers ORDER BY CodeProvider", con))
+            using (cmd = new SQLiteCommand("SELECT NameProvider, CodeProvider FROM Providers ORDER BY NameProvider", con))
             {
                 if (ddProviderEquip.Items.Count > 0) ddProviderEquip.Items.Clear();
                 if (ddUpdProviderEquip.Items.Count > 0) ddUpdProviderEquip.Items.Clear();
@@ -398,13 +400,13 @@ namespace CEA
 
         private void InsertEquipment()
         {
-            //int codeEquip = 0;
             using (con = new SQLiteConnection(conStr))
-            using (cmd = new SQLiteCommand("INSERT into Equipment(NameEquip, Count, CountFree, DescriptionEquip, DatePurchaseEquip, CodeProvider)" +
-                "VALUES (@name, @count, @countFree, @descrip, @date, @provider); SELECT last_insert_rowid();", con))
+            using (cmd = new SQLiteCommand("INSERT into Equipment(NameEquip, Count, CountFree, DescriptionEquip," + 
+                "DatePurchaseEquip, CodeProvider, Price)" +
+                "VALUES (@name, @count, @countFree, @descrip, @date, @provider, @price); SELECT last_insert_rowid();", con))
             {
-                //string[] data = new string[7];
-                if (ddProviderEquip.SelectedIndex != -1 && !tbNameEquip.Text.Equals("") && !tbCountEquip.Text.Equals(""))
+                if (ddProviderEquip.SelectedIndex != -1 && !tbNameEquip.Text.Equals("") && !tbCountEquip.Text.Equals("")
+                    && !tbPriceEquip.Text.Equals(""))
                 {
                     cmd.Parameters.AddWithValue("@name", tbNameEquip.Text);
                     if (tbCountEquip.Text.Equals("")) tbCountEquip.Text = "1";
@@ -413,6 +415,7 @@ namespace CEA
                     cmd.Parameters.AddWithValue("@descrip", tbDescriptionEquip.Text);
                     cmd.Parameters.AddWithValue("@date", datePickEquip.Text);
                     cmd.Parameters.AddWithValue("@provider", CodeProviderForEquip[ddProviderEquip.SelectedIndex]);
+                    cmd.Parameters.AddWithValue("@price", tbPriceEquip.Text);
 
                     try
                     {
@@ -424,22 +427,6 @@ namespace CEA
                         Reset();
                         MessageBox.Show("Запись добавлена", "Уведомление", MessageBoxButtons.OK,
                         MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                        //codeEquip = Convert.ToInt32(cmd.ExecuteScalar());
-
-                        //data[0] = codeEquip.ToString();
-                        //data[1] = tbNameEquip.Text;
-                        //data[2] = tbCountEquip.Text;
-                        //data[3] = tbCountEquip.Text;
-                        //data[4] = tbDescriptionEquip.Text;
-                        //data[5] = datePickEquip.Text;
-
-                        ////Получение имени поставщика по коду                    
-                        ////for (int i = 0; i < data.Count; i++)
-                        ////{
-                        ////    data[i][9] = SelectNameProviderFromCode(Convert.ToInt32(data[i][7]));
-                        ////}
-
-                        //dgvEquip.Rows.Add(data);
                     }
                     catch (SQLiteException)
                     {
@@ -489,7 +476,8 @@ namespace CEA
             {
                 if (ddNameEquipAlloc.SelectedIndex != -1 && ddNameStaffAlloc.SelectedIndex != -1 && !tbCountEquipAlloc.Text.Equals(""))
                 {
-                    if (Convert.ToInt32(tbCountEquipAlloc.Text) <= Convert.ToInt32(tbCountFreeEquipAlloc.Text))
+                    if (Convert.ToInt32(tbCountEquipAlloc.Text) <= Convert.ToInt32(tbCountFreeEquipAlloc.Text)
+                        && Convert.ToInt32(tbCountEquipAlloc.Text) > 0)
                     {
                         cmd.Parameters.AddWithValue("@codeEquip", CodeEquipForAllocation[ddNameEquipAlloc.SelectedIndex]);
                         cmd.Parameters.AddWithValue("@codeEmployee", CodeStaffForAllocation[ddNameStaffAlloc.SelectedIndex]);
@@ -516,7 +504,7 @@ namespace CEA
                         }
                     }
                     else
-                        MessageBox.Show("Превышено допустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Недопустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -540,7 +528,7 @@ namespace CEA
                     int count = Convert.ToInt32(reader[0].ToString());
                     reader.Close();
 
-                    if (count >= Convert.ToInt32(tbCountCancell.Text))
+                    if (count >= Convert.ToInt32(tbCountCancell.Text) && Convert.ToInt32(tbCountCancell.Text) > 0)
                     {
                         cmd.CommandText = "INSERT into Cancellation(CodeEquip, Count, Reason) VALUES (@codeEquip, @count, @reason)";
 
@@ -561,7 +549,7 @@ namespace CEA
                             throw;
                         }
                     }
-                    else MessageBox.Show("Превышено допустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else MessageBox.Show("Недопустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -696,7 +684,6 @@ namespace CEA
         private void btnEquip_Click(object sender, EventArgs e)
         {
             ProvidersListFill();
-            //Reset();
             tbSearch.Clear();
             button_Click(sender, e);
             pages.SetPage("Техника");
@@ -707,7 +694,6 @@ namespace CEA
         {
             button_Click(sender, e);
             tbSearch.Clear();
-            //Reset();
             pages.SetPage("Работники");
             menuEquip.Enabled = true;
         }
@@ -718,7 +704,6 @@ namespace CEA
 
             button_Click(sender, e);
             tbSearch.Clear();
-            //Reset();
             pages.SetPage("Распределение");
             menuEquip.Enabled = true;
             EquipListFill();
@@ -728,7 +713,6 @@ namespace CEA
         {
             button_Click(sender, e);
             tbSearch.Clear();
-            //Reset();
             pages.SetPage("Списание");
             menuEquip.Enabled = true;
             EquipListFill();
@@ -737,7 +721,6 @@ namespace CEA
         private void btnProviders_Click(object sender, EventArgs e)
         {
             button_Click(sender, e);
-            //Reset();
             tbSearch.Clear();
             pages.SetPage("Поставщики");
             menuEquip.Enabled = true;
@@ -747,7 +730,6 @@ namespace CEA
         {
             button_Click(sender, e);
             tbSearch.Clear();
-            //Reset();
             pages.SetPage("Отчёты");
             menuEquip.Enabled = false;
         }
@@ -782,7 +764,7 @@ namespace CEA
         private void deleteRecord_Click(object sender, EventArgs e)
         {
             bool success = false;
-            if (MessageBox.Show("Удалить запись(и) и все связанные записи в других таблицах?", "Удаление", MessageBoxButtons.OKCancel,
+            if (MessageBox.Show("Удалить запись(и)?", "Удаление", MessageBoxButtons.OKCancel,
                     MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.OK)
             {
                 int n = pages.SelectedIndex;
@@ -1006,11 +988,12 @@ namespace CEA
 
             using (con = new SQLiteConnection(conStr))
             using (cmd = new SQLiteCommand("UPDATE Equipment SET NameEquip = @name, Count = @count, CountFree = @countFree, " +
-                "DescriptionEquip = @descrip, DatePurchaseEquip = @date, CodeProvider = @provider WHERE CodeEquip = @code", con))
+                "DescriptionEquip = @descrip, DatePurchaseEquip = @date, CodeProvider = @provider, Price = @price " +  
+                "WHERE CodeEquip = @code", con))
             {
-                if (!tbUpdNameEquip.Text.Equals("") && !tbUpdCountEquip.Text.Equals(""))
+                if (!tbUpdNameEquip.Text.Equals("") && !tbUpdCountEquip.Text.Equals("") && !tbUpdPriceEquip.Text.Equals(""))
                 {
-                    if (countFreeNew >= 0)
+                    if (countFreeNew > 0)
                     {
                         cmd.Parameters.AddWithValue("@code", code);
                         cmd.Parameters.AddWithValue("@name", tbUpdNameEquip.Text);
@@ -1019,6 +1002,7 @@ namespace CEA
                         cmd.Parameters.AddWithValue("@countFree", countFreeNew.ToString());
                         cmd.Parameters.AddWithValue("@descrip", tbUpdDescripEquip.Text);
                         cmd.Parameters.AddWithValue("@date", datePickUpdEquip.Text);
+                        cmd.Parameters.AddWithValue("@price", tbUpdPriceEquip.Text);
                         if (ddUpdProviderEquip.SelectedIndex != -1)
                             cmd.Parameters.AddWithValue("@provider", CodeProviderForEquip[ddUpdProviderEquip.SelectedIndex]);
                         else if (!dgvEquip[6, curRow].Value.ToString().Equals(""))
@@ -1042,7 +1026,6 @@ namespace CEA
 
                             MessageBox.Show("Редактирование успешно выполнено", "Уведомление", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                            //Reset();
                         }
                         catch (SQLiteException)
                         {
@@ -1050,7 +1033,7 @@ namespace CEA
                         }
                     }
                     else
-                        MessageBox.Show("Превышено допустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Недопустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1070,7 +1053,8 @@ namespace CEA
 
                 if (!tbUpdCountEquipAlloc.Text.Equals(""))
                 {
-                    if (Convert.ToInt32(tbUpdCountEquipAlloc.Text) <= Convert.ToInt32(tbUpdCountFreeEquipAlloc.Text) + oldCount)
+                    if (Convert.ToInt32(tbUpdCountEquipAlloc.Text) <= Convert.ToInt32(tbUpdCountFreeEquipAlloc.Text) + oldCount
+                        && Convert.ToInt32(tbUpdCountEquipAlloc.Text) > 0)
                     {
                         cmd.Parameters.AddWithValue("@code", code);
                         if (ddUpdNameEquipAlloc.SelectedIndex != -1)
@@ -1097,7 +1081,6 @@ namespace CEA
                             dgvAllocation.CurrentCell = dgvAllocation[3, curRow];
 
                             dgvEquip.Rows.Clear();
-                            //Reset();
                             EquipmentFill();
                             MessageBox.Show("Редактирование успешно выполнено", "Уведомление", MessageBoxButtons.OK,
                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
@@ -1107,10 +1090,9 @@ namespace CEA
                             throw;
                         }
                     }
-                    else MessageBox.Show("Превышено допустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else MessageBox.Show("Недопустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
@@ -1142,7 +1124,7 @@ namespace CEA
                     int count = Convert.ToInt32(reader[0].ToString());
                     reader.Close();
 
-                    if (count + oldCount >= Convert.ToInt32(tbUpdCountCancell.Text))
+                    if (count + oldCount >= Convert.ToInt32(tbUpdCountCancell.Text) && Convert.ToInt32(tbUpdCountCancell.Text) > 0)
                     {
                         cmd.CommandText = "UPDATE Cancellation SET CodeEquip = @codeEquip, Count = @count, Reason = @reason " +
                        "WHERE CodeCancell = @code";
@@ -1162,7 +1144,6 @@ namespace CEA
                             EquipmentFill();
                             MessageBox.Show("Редактирование успешно выполнено", "Уведомление", MessageBoxButtons.OK,
                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                            //Reset();
                         }
                         catch (SQLiteException)
                         {
@@ -1170,7 +1151,7 @@ namespace CEA
                         }
                     }
                     else
-                        MessageBox.Show("Превышено допустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Недопустимое количество!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                     MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1210,7 +1191,6 @@ namespace CEA
                         dgvProviders.CurrentCell = dgvProviders[3, curRow];
                         MessageBox.Show("Редактирование успешно выполнено", "Уведомление", MessageBoxButtons.OK,
                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                        //Reset();
                     }
                     else
                         MessageBox.Show("Заполните все данные!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1254,7 +1234,6 @@ namespace CEA
 
                     MessageBox.Show("Редактирование успешно выполнено", "Уведомление", MessageBoxButtons.OK,
                     MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                    //Reset();
                 }
                 catch (SQLiteException)
                 {
@@ -1270,13 +1249,12 @@ namespace CEA
             if (dgvEquip.SelectedRows.Count > 0)
                 curRow = dgvEquip.SelectedRows[0].Index;
 
-            //dgvEquip[0, curRow].Value.ToString();
-
             tbUpdNameEquip.Text = dgvEquip[1, curRow].Value.ToString();
             tbUpdCountEquip.Text = dgvEquip[2, curRow].Value.ToString();
             tbUpdDescripEquip.Text = dgvEquip[4, curRow].Value.ToString();
             datePickUpdEquip.Text = dgvEquip[5, curRow].Value.ToString();
             ddUpdProviderEquip.Text = dgvEquip[7, curRow].Value.ToString();
+            tbUpdPriceEquip.Text = dgvEquip[8, curRow].Value.ToString();
         }
 
         private void dgvEmployee_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -1285,8 +1263,6 @@ namespace CEA
 
             if (dgvEmployee.SelectedRows.Count > 0)
                 curRow = dgvEmployee.SelectedRows[0].Index;
-
-            //dgvEmployee[0, curRow].Value.ToString();
 
             tbUpdNameStaff.Text = dgvEmployee[1, curRow].Value.ToString();
             tbUpdPhoneStaff.Text = dgvEmployee[2, curRow].Value.ToString();
@@ -1317,8 +1293,6 @@ namespace CEA
 
             if (dgvCancellation.SelectedRows.Count > 0)
                 curRow = dgvCancellation.SelectedRows[0].Index;
-
-            //dgvEmployee[0, curRow].Value.ToString();
 
             ddUpdNameEquipCancell.Text = dgvCancellation[2, curRow].Value.ToString();
             tbUpdCountCancell.Text = dgvCancellation[3, curRow].Value.ToString();
