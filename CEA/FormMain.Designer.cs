@@ -47,6 +47,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation3 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation6 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -59,6 +63,10 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -167,14 +175,6 @@
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation4 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnMaxMenu = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnMinMenu = new Bunifu.Framework.UI.BunifuImageButton();
@@ -189,6 +189,16 @@
             this.pages = new Bunifu.UI.WinForms.BunifuPages();
             this.Equipment = new System.Windows.Forms.TabPage();
             this.dgvEquip = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.CodeEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CountEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CountFree = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescriptionEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodeProviderEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameProviderEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CostEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Staff = new System.Windows.Forms.TabPage();
             this.dgvEmployee = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.CodeEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,6 +253,7 @@
             this.equipAdd = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
+            this.tbPriceEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tbNameEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btnAddEquip = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ddProviderEquip = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -252,6 +263,7 @@
             this.equipUpdate = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
+            this.tbUpdPriceEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btnUpdateEquip = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ddUpdProviderEquip = new Bunifu.UI.WinForms.BunifuDropdown();
             this.tbUpdNameEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -332,18 +344,6 @@
             this.toolTip = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.easyHTMLReport = new KimToo.EasyHTMLReports(this.components);
             this.transMenu = new Bunifu.UI.WinForms.BunifuTransition(this.components);
-            this.tbPriceEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.tbUpdPriceEquip = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.CodeEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CountEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CountFree = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescriptionEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DatePurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodeProviderEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameProviderEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CostEquip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinMenu)).BeginInit();
@@ -899,6 +899,68 @@
             this.toolTip.SetToolTipIcon(this.dgvEquip, null);
             this.toolTip.SetToolTipTitle(this.dgvEquip, "");
             this.dgvEquip.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEquip_RowEnter);
+            // 
+            // CodeEquip
+            // 
+            this.CodeEquip.HeaderText = "Код техники";
+            this.CodeEquip.Name = "CodeEquip";
+            this.CodeEquip.ReadOnly = true;
+            this.CodeEquip.Visible = false;
+            // 
+            // NameEquip
+            // 
+            this.NameEquip.HeaderText = "Название";
+            this.NameEquip.Name = "NameEquip";
+            this.NameEquip.ReadOnly = true;
+            // 
+            // CountEquip
+            // 
+            this.CountEquip.HeaderText = "Всего";
+            this.CountEquip.Name = "CountEquip";
+            this.CountEquip.ReadOnly = true;
+            // 
+            // CountFree
+            // 
+            this.CountFree.HeaderText = "Свободно";
+            this.CountFree.Name = "CountFree";
+            this.CountFree.ReadOnly = true;
+            // 
+            // DescriptionEquip
+            // 
+            this.DescriptionEquip.HeaderText = "Описание";
+            this.DescriptionEquip.Name = "DescriptionEquip";
+            this.DescriptionEquip.ReadOnly = true;
+            // 
+            // DatePurchase
+            // 
+            this.DatePurchase.HeaderText = "Дата покупки";
+            this.DatePurchase.Name = "DatePurchase";
+            this.DatePurchase.ReadOnly = true;
+            // 
+            // CodeProviderEquip
+            // 
+            this.CodeProviderEquip.HeaderText = "Код поставщика";
+            this.CodeProviderEquip.Name = "CodeProviderEquip";
+            this.CodeProviderEquip.ReadOnly = true;
+            this.CodeProviderEquip.Visible = false;
+            // 
+            // NameProviderEquip
+            // 
+            this.NameProviderEquip.HeaderText = "Поставщик";
+            this.NameProviderEquip.Name = "NameProviderEquip";
+            this.NameProviderEquip.ReadOnly = true;
+            // 
+            // PriceEquip
+            // 
+            this.PriceEquip.HeaderText = "Цена, р.";
+            this.PriceEquip.Name = "PriceEquip";
+            this.PriceEquip.ReadOnly = true;
+            // 
+            // CostEquip
+            // 
+            this.CostEquip.HeaderText = "Стоимость, р.";
+            this.CostEquip.Name = "CostEquip";
+            this.CostEquip.ReadOnly = true;
             // 
             // Staff
             // 
@@ -1988,6 +2050,87 @@
             this.toolTip.SetToolTipIcon(this.bunifuShadowPanel1, null);
             this.toolTip.SetToolTipTitle(this.bunifuShadowPanel1, "");
             // 
+            // tbPriceEquip
+            // 
+            this.tbPriceEquip.AcceptsReturn = false;
+            this.tbPriceEquip.AcceptsTab = false;
+            this.tbPriceEquip.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbPriceEquip.AnimationSpeed = 200;
+            this.tbPriceEquip.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbPriceEquip.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbPriceEquip.BackColor = System.Drawing.Color.Transparent;
+            this.tbPriceEquip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbPriceEquip.BackgroundImage")));
+            this.tbPriceEquip.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.tbPriceEquip.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tbPriceEquip.BorderColorHover = System.Drawing.Color.DarkGray;
+            this.tbPriceEquip.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbPriceEquip.BorderRadius = 30;
+            this.tbPriceEquip.BorderThickness = 1;
+            this.tbPriceEquip.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbPriceEquip.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.transOptions.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transMenu.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transButton.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transColorBtn.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tbPriceEquip.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tbPriceEquip.DefaultText = "";
+            this.tbPriceEquip.FillColor = System.Drawing.Color.White;
+            this.tbPriceEquip.HideSelection = true;
+            this.tbPriceEquip.IconLeft = null;
+            this.tbPriceEquip.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPriceEquip.IconPadding = 10;
+            this.tbPriceEquip.IconRight = null;
+            this.tbPriceEquip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPriceEquip.Lines = new string[0];
+            this.tbPriceEquip.Location = new System.Drawing.Point(292, 58);
+            this.tbPriceEquip.MaxLength = 32767;
+            this.tbPriceEquip.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tbPriceEquip.Modified = false;
+            this.tbPriceEquip.Multiline = false;
+            this.tbPriceEquip.Name = "tbPriceEquip";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbPriceEquip.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbPriceEquip.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbPriceEquip.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbPriceEquip.OnIdleState = stateProperties4;
+            this.tbPriceEquip.PasswordChar = '\0';
+            this.tbPriceEquip.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.tbPriceEquip.PlaceholderText = "Цена";
+            this.tbPriceEquip.ReadOnly = false;
+            this.tbPriceEquip.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbPriceEquip.SelectedText = "";
+            this.tbPriceEquip.SelectionLength = 0;
+            this.tbPriceEquip.SelectionStart = 0;
+            this.tbPriceEquip.ShortcutsEnabled = true;
+            this.tbPriceEquip.Size = new System.Drawing.Size(148, 35);
+            this.tbPriceEquip.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tbPriceEquip.TabIndex = 4;
+            this.tbPriceEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbPriceEquip.TextMarginBottom = 0;
+            this.tbPriceEquip.TextMarginLeft = 5;
+            this.tbPriceEquip.TextMarginTop = 0;
+            this.tbPriceEquip.TextPlaceholder = "Цена";
+            this.toolTip.SetToolTip(this.tbPriceEquip, "");
+            this.toolTip.SetToolTipIcon(this.tbPriceEquip, null);
+            this.toolTip.SetToolTipTitle(this.tbPriceEquip, "");
+            this.tbPriceEquip.UseSystemPasswordChar = false;
+            this.tbPriceEquip.WordWrap = true;
+            // 
             // tbNameEquip
             // 
             this.tbNameEquip.AcceptsReturn = false;
@@ -2103,7 +2246,7 @@
             this.btnAddEquip.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddEquip.selected = true;
             this.btnAddEquip.Size = new System.Drawing.Size(426, 41);
-            this.btnAddEquip.TabIndex = 10;
+            this.btnAddEquip.TabIndex = 7;
             this.btnAddEquip.Text = "Добавить";
             this.btnAddEquip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddEquip.Textcolor = System.Drawing.Color.White;
@@ -2148,7 +2291,7 @@
             this.ddProviderEquip.Name = "ddProviderEquip";
             this.ddProviderEquip.Size = new System.Drawing.Size(200, 32);
             this.ddProviderEquip.Sorted = true;
-            this.ddProviderEquip.TabIndex = 5;
+            this.ddProviderEquip.TabIndex = 6;
             this.ddProviderEquip.Text = "Поставщик";
             this.toolTip.SetToolTip(this.ddProviderEquip, "");
             this.toolTip.SetToolTipIcon(this.ddProviderEquip, null);
@@ -2183,7 +2326,7 @@
             this.datePickEquip.MinimumSize = new System.Drawing.Size(200, 32);
             this.datePickEquip.Name = "datePickEquip";
             this.datePickEquip.Size = new System.Drawing.Size(200, 32);
-            this.datePickEquip.TabIndex = 4;
+            this.datePickEquip.TabIndex = 5;
             this.toolTip.SetToolTip(this.datePickEquip, "");
             this.toolTip.SetToolTipIcon(this.datePickEquip, null);
             this.toolTip.SetToolTipTitle(this.datePickEquip, "Дата покупки");
@@ -2413,6 +2556,87 @@
             this.toolTip.SetToolTipIcon(this.bunifuShadowPanel2, null);
             this.toolTip.SetToolTipTitle(this.bunifuShadowPanel2, "");
             // 
+            // tbUpdPriceEquip
+            // 
+            this.tbUpdPriceEquip.AcceptsReturn = false;
+            this.tbUpdPriceEquip.AcceptsTab = false;
+            this.tbUpdPriceEquip.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbUpdPriceEquip.AnimationSpeed = 200;
+            this.tbUpdPriceEquip.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbUpdPriceEquip.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbUpdPriceEquip.BackColor = System.Drawing.Color.Transparent;
+            this.tbUpdPriceEquip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbUpdPriceEquip.BackgroundImage")));
+            this.tbUpdPriceEquip.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.tbUpdPriceEquip.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tbUpdPriceEquip.BorderColorHover = System.Drawing.Color.DarkGray;
+            this.tbUpdPriceEquip.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbUpdPriceEquip.BorderRadius = 30;
+            this.tbUpdPriceEquip.BorderThickness = 1;
+            this.tbUpdPriceEquip.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbUpdPriceEquip.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.transOptions.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transMenu.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transButton.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.transColorBtn.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.tbUpdPriceEquip.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tbUpdPriceEquip.DefaultText = "";
+            this.tbUpdPriceEquip.FillColor = System.Drawing.Color.White;
+            this.tbUpdPriceEquip.HideSelection = true;
+            this.tbUpdPriceEquip.IconLeft = null;
+            this.tbUpdPriceEquip.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUpdPriceEquip.IconPadding = 10;
+            this.tbUpdPriceEquip.IconRight = null;
+            this.tbUpdPriceEquip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUpdPriceEquip.Lines = new string[0];
+            this.tbUpdPriceEquip.Location = new System.Drawing.Point(290, 58);
+            this.tbUpdPriceEquip.MaxLength = 32767;
+            this.tbUpdPriceEquip.MinimumSize = new System.Drawing.Size(100, 35);
+            this.tbUpdPriceEquip.Modified = false;
+            this.tbUpdPriceEquip.Multiline = false;
+            this.tbUpdPriceEquip.Name = "tbUpdPriceEquip";
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbUpdPriceEquip.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.Empty;
+            stateProperties18.FillColor = System.Drawing.Color.White;
+            stateProperties18.ForeColor = System.Drawing.Color.Empty;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbUpdPriceEquip.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbUpdPriceEquip.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbUpdPriceEquip.OnIdleState = stateProperties20;
+            this.tbUpdPriceEquip.PasswordChar = '\0';
+            this.tbUpdPriceEquip.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.tbUpdPriceEquip.PlaceholderText = "Цена";
+            this.tbUpdPriceEquip.ReadOnly = false;
+            this.tbUpdPriceEquip.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbUpdPriceEquip.SelectedText = "";
+            this.tbUpdPriceEquip.SelectionLength = 0;
+            this.tbUpdPriceEquip.SelectionStart = 0;
+            this.tbUpdPriceEquip.ShortcutsEnabled = true;
+            this.tbUpdPriceEquip.Size = new System.Drawing.Size(150, 35);
+            this.tbUpdPriceEquip.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tbUpdPriceEquip.TabIndex = 4;
+            this.tbUpdPriceEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbUpdPriceEquip.TextMarginBottom = 0;
+            this.tbUpdPriceEquip.TextMarginLeft = 5;
+            this.tbUpdPriceEquip.TextMarginTop = 0;
+            this.tbUpdPriceEquip.TextPlaceholder = "Цена";
+            this.toolTip.SetToolTip(this.tbUpdPriceEquip, "Цена");
+            this.toolTip.SetToolTipIcon(this.tbUpdPriceEquip, null);
+            this.toolTip.SetToolTipTitle(this.tbUpdPriceEquip, "");
+            this.tbUpdPriceEquip.UseSystemPasswordChar = false;
+            this.tbUpdPriceEquip.WordWrap = true;
+            // 
             // btnUpdateEquip
             // 
             this.btnUpdateEquip.Active = true;
@@ -2447,7 +2671,7 @@
             this.btnUpdateEquip.OnHoverTextColor = System.Drawing.Color.White;
             this.btnUpdateEquip.selected = true;
             this.btnUpdateEquip.Size = new System.Drawing.Size(426, 41);
-            this.btnUpdateEquip.TabIndex = 6;
+            this.btnUpdateEquip.TabIndex = 7;
             this.btnUpdateEquip.Text = "Редактировать";
             this.btnUpdateEquip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdateEquip.Textcolor = System.Drawing.Color.White;
@@ -2492,7 +2716,7 @@
             this.ddUpdProviderEquip.Name = "ddUpdProviderEquip";
             this.ddUpdProviderEquip.Size = new System.Drawing.Size(200, 32);
             this.ddUpdProviderEquip.Sorted = true;
-            this.ddUpdProviderEquip.TabIndex = 5;
+            this.ddUpdProviderEquip.TabIndex = 6;
             this.ddUpdProviderEquip.Text = "Поставщик";
             this.toolTip.SetToolTip(this.ddUpdProviderEquip, "");
             this.toolTip.SetToolTipIcon(this.ddUpdProviderEquip, null);
@@ -2608,7 +2832,7 @@
             this.datePickUpdEquip.MinimumSize = new System.Drawing.Size(200, 32);
             this.datePickUpdEquip.Name = "datePickUpdEquip";
             this.datePickUpdEquip.Size = new System.Drawing.Size(200, 32);
-            this.datePickUpdEquip.TabIndex = 4;
+            this.datePickUpdEquip.TabIndex = 5;
             this.toolTip.SetToolTip(this.datePickUpdEquip, "");
             this.toolTip.SetToolTipIcon(this.datePickUpdEquip, null);
             this.toolTip.SetToolTipTitle(this.datePickUpdEquip, "Дата покупки");
@@ -5940,230 +6164,6 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.transMenu.DefaultAnimation = animation1;
-            // 
-            // tbPriceEquip
-            // 
-            this.tbPriceEquip.AcceptsReturn = false;
-            this.tbPriceEquip.AcceptsTab = false;
-            this.tbPriceEquip.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbPriceEquip.AnimationSpeed = 200;
-            this.tbPriceEquip.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbPriceEquip.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbPriceEquip.BackColor = System.Drawing.Color.Transparent;
-            this.tbPriceEquip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbPriceEquip.BackgroundImage")));
-            this.tbPriceEquip.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
-            this.tbPriceEquip.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.tbPriceEquip.BorderColorHover = System.Drawing.Color.DarkGray;
-            this.tbPriceEquip.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tbPriceEquip.BorderRadius = 30;
-            this.tbPriceEquip.BorderThickness = 1;
-            this.tbPriceEquip.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbPriceEquip.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.transOptions.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transMenu.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transButton.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transColorBtn.SetDecoration(this.tbPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.tbPriceEquip.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tbPriceEquip.DefaultText = "";
-            this.tbPriceEquip.FillColor = System.Drawing.Color.White;
-            this.tbPriceEquip.HideSelection = true;
-            this.tbPriceEquip.IconLeft = null;
-            this.tbPriceEquip.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPriceEquip.IconPadding = 10;
-            this.tbPriceEquip.IconRight = null;
-            this.tbPriceEquip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPriceEquip.Lines = new string[0];
-            this.tbPriceEquip.Location = new System.Drawing.Point(292, 58);
-            this.tbPriceEquip.MaxLength = 32767;
-            this.tbPriceEquip.MinimumSize = new System.Drawing.Size(100, 35);
-            this.tbPriceEquip.Modified = false;
-            this.tbPriceEquip.Multiline = false;
-            this.tbPriceEquip.Name = "tbPriceEquip";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbPriceEquip.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tbPriceEquip.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbPriceEquip.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbPriceEquip.OnIdleState = stateProperties4;
-            this.tbPriceEquip.PasswordChar = '\0';
-            this.tbPriceEquip.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.tbPriceEquip.PlaceholderText = "Цена";
-            this.tbPriceEquip.ReadOnly = false;
-            this.tbPriceEquip.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbPriceEquip.SelectedText = "";
-            this.tbPriceEquip.SelectionLength = 0;
-            this.tbPriceEquip.SelectionStart = 0;
-            this.tbPriceEquip.ShortcutsEnabled = true;
-            this.tbPriceEquip.Size = new System.Drawing.Size(148, 35);
-            this.tbPriceEquip.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tbPriceEquip.TabIndex = 11;
-            this.tbPriceEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbPriceEquip.TextMarginBottom = 0;
-            this.tbPriceEquip.TextMarginLeft = 5;
-            this.tbPriceEquip.TextMarginTop = 0;
-            this.tbPriceEquip.TextPlaceholder = "Цена";
-            this.toolTip.SetToolTip(this.tbPriceEquip, "");
-            this.toolTip.SetToolTipIcon(this.tbPriceEquip, null);
-            this.toolTip.SetToolTipTitle(this.tbPriceEquip, "");
-            this.tbPriceEquip.UseSystemPasswordChar = false;
-            this.tbPriceEquip.WordWrap = true;
-            // 
-            // tbUpdPriceEquip
-            // 
-            this.tbUpdPriceEquip.AcceptsReturn = false;
-            this.tbUpdPriceEquip.AcceptsTab = false;
-            this.tbUpdPriceEquip.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbUpdPriceEquip.AnimationSpeed = 200;
-            this.tbUpdPriceEquip.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tbUpdPriceEquip.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbUpdPriceEquip.BackColor = System.Drawing.Color.Transparent;
-            this.tbUpdPriceEquip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbUpdPriceEquip.BackgroundImage")));
-            this.tbUpdPriceEquip.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
-            this.tbUpdPriceEquip.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.tbUpdPriceEquip.BorderColorHover = System.Drawing.Color.DarkGray;
-            this.tbUpdPriceEquip.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tbUpdPriceEquip.BorderRadius = 30;
-            this.tbUpdPriceEquip.BorderThickness = 1;
-            this.tbUpdPriceEquip.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tbUpdPriceEquip.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.transOptions.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transMenu.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transButton.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.transColorBtn.SetDecoration(this.tbUpdPriceEquip, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.tbUpdPriceEquip.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tbUpdPriceEquip.DefaultText = "";
-            this.tbUpdPriceEquip.FillColor = System.Drawing.Color.White;
-            this.tbUpdPriceEquip.HideSelection = true;
-            this.tbUpdPriceEquip.IconLeft = null;
-            this.tbUpdPriceEquip.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUpdPriceEquip.IconPadding = 10;
-            this.tbUpdPriceEquip.IconRight = null;
-            this.tbUpdPriceEquip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUpdPriceEquip.Lines = new string[0];
-            this.tbUpdPriceEquip.Location = new System.Drawing.Point(290, 58);
-            this.tbUpdPriceEquip.MaxLength = 32767;
-            this.tbUpdPriceEquip.MinimumSize = new System.Drawing.Size(100, 35);
-            this.tbUpdPriceEquip.Modified = false;
-            this.tbUpdPriceEquip.Multiline = false;
-            this.tbUpdPriceEquip.Name = "tbUpdPriceEquip";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbUpdPriceEquip.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.Empty;
-            stateProperties18.FillColor = System.Drawing.Color.White;
-            stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tbUpdPriceEquip.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbUpdPriceEquip.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tbUpdPriceEquip.OnIdleState = stateProperties20;
-            this.tbUpdPriceEquip.PasswordChar = '\0';
-            this.tbUpdPriceEquip.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.tbUpdPriceEquip.PlaceholderText = "Цена";
-            this.tbUpdPriceEquip.ReadOnly = false;
-            this.tbUpdPriceEquip.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbUpdPriceEquip.SelectedText = "";
-            this.tbUpdPriceEquip.SelectionLength = 0;
-            this.tbUpdPriceEquip.SelectionStart = 0;
-            this.tbUpdPriceEquip.ShortcutsEnabled = true;
-            this.tbUpdPriceEquip.Size = new System.Drawing.Size(150, 35);
-            this.tbUpdPriceEquip.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tbUpdPriceEquip.TabIndex = 12;
-            this.tbUpdPriceEquip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbUpdPriceEquip.TextMarginBottom = 0;
-            this.tbUpdPriceEquip.TextMarginLeft = 5;
-            this.tbUpdPriceEquip.TextMarginTop = 0;
-            this.tbUpdPriceEquip.TextPlaceholder = "Цена";
-            this.toolTip.SetToolTip(this.tbUpdPriceEquip, "Цена");
-            this.toolTip.SetToolTipIcon(this.tbUpdPriceEquip, null);
-            this.toolTip.SetToolTipTitle(this.tbUpdPriceEquip, "");
-            this.tbUpdPriceEquip.UseSystemPasswordChar = false;
-            this.tbUpdPriceEquip.WordWrap = true;
-            // 
-            // CodeEquip
-            // 
-            this.CodeEquip.HeaderText = "Код техники";
-            this.CodeEquip.Name = "CodeEquip";
-            this.CodeEquip.ReadOnly = true;
-            this.CodeEquip.Visible = false;
-            // 
-            // NameEquip
-            // 
-            this.NameEquip.HeaderText = "Название";
-            this.NameEquip.Name = "NameEquip";
-            this.NameEquip.ReadOnly = true;
-            // 
-            // CountEquip
-            // 
-            this.CountEquip.HeaderText = "Всего";
-            this.CountEquip.Name = "CountEquip";
-            this.CountEquip.ReadOnly = true;
-            // 
-            // CountFree
-            // 
-            this.CountFree.HeaderText = "Свободно";
-            this.CountFree.Name = "CountFree";
-            this.CountFree.ReadOnly = true;
-            // 
-            // DescriptionEquip
-            // 
-            this.DescriptionEquip.HeaderText = "Описание";
-            this.DescriptionEquip.Name = "DescriptionEquip";
-            this.DescriptionEquip.ReadOnly = true;
-            // 
-            // DatePurchase
-            // 
-            this.DatePurchase.HeaderText = "Дата покупки";
-            this.DatePurchase.Name = "DatePurchase";
-            this.DatePurchase.ReadOnly = true;
-            // 
-            // CodeProviderEquip
-            // 
-            this.CodeProviderEquip.HeaderText = "Код поставщика";
-            this.CodeProviderEquip.Name = "CodeProviderEquip";
-            this.CodeProviderEquip.ReadOnly = true;
-            this.CodeProviderEquip.Visible = false;
-            // 
-            // NameProviderEquip
-            // 
-            this.NameProviderEquip.HeaderText = "Поставщик";
-            this.NameProviderEquip.Name = "NameProviderEquip";
-            this.NameProviderEquip.ReadOnly = true;
-            // 
-            // PriceEquip
-            // 
-            this.PriceEquip.HeaderText = "Цена, р.";
-            this.PriceEquip.Name = "PriceEquip";
-            this.PriceEquip.ReadOnly = true;
-            // 
-            // CostEquip
-            // 
-            this.CostEquip.HeaderText = "Стоимость, р.";
-            this.CostEquip.Name = "CostEquip";
-            this.CostEquip.ReadOnly = true;
             // 
             // FormMain
             // 

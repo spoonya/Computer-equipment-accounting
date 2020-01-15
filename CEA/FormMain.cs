@@ -413,7 +413,8 @@ namespace CEA
                     cmd.Parameters.AddWithValue("@count", tbCountEquip.Text);
                     cmd.Parameters.AddWithValue("@countFree", tbCountEquip.Text);
                     cmd.Parameters.AddWithValue("@descrip", tbDescriptionEquip.Text);
-                    cmd.Parameters.AddWithValue("@date", datePickEquip.Text);
+                    DateTime date = Convert.ToDateTime(datePickEquip.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@provider", CodeProviderForEquip[ddProviderEquip.SelectedIndex]);
                     cmd.Parameters.AddWithValue("@price", tbPriceEquip.Text);
 
@@ -776,6 +777,8 @@ namespace CEA
                             DeleteEquip(DeleteRows(dgvEquip));
                             dgvAllocation.Rows.Clear();
                             AllocationFill();
+                            dgvCancellation.Rows.Clear();
+                            CancellationFill();
                             success = true;
                         }
                         break;
@@ -1001,7 +1004,8 @@ namespace CEA
                         cmd.Parameters.AddWithValue("@count", tbUpdCountEquip.Text);
                         cmd.Parameters.AddWithValue("@countFree", countFreeNew.ToString());
                         cmd.Parameters.AddWithValue("@descrip", tbUpdDescripEquip.Text);
-                        cmd.Parameters.AddWithValue("@date", datePickUpdEquip.Text);
+                        DateTime date = Convert.ToDateTime(datePickUpdEquip.Value.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@date", date);
                         cmd.Parameters.AddWithValue("@price", tbUpdPriceEquip.Text);
                         if (ddUpdProviderEquip.SelectedIndex != -1)
                             cmd.Parameters.AddWithValue("@provider", CodeProviderForEquip[ddUpdProviderEquip.SelectedIndex]);
@@ -1029,7 +1033,7 @@ namespace CEA
                         }
                         catch (SQLiteException)
                         {
-                            throw;
+                            MessageBox.Show("Введите уникальное имя техники!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
@@ -1312,6 +1316,8 @@ namespace CEA
 
                 dgvAllocation.Rows.Clear();
                 AllocationFill();
+                dgvCancellation.Rows.Clear();
+                CancellationFill();
             }
             else MessageBox.Show("Строка не выбрана!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
@@ -1673,72 +1679,189 @@ namespace CEA
         {
             easyHTMLReport.Clear();
             easyHTMLReport.AddImage(img, "width = 15%, style = 'float: right'");
-            easyHTMLReport.AddString("<h1>КУП Институт Молодечнопроект</h1>");
+            easyHTMLReport.AddString("<h1>Организация</h1>");
             easyHTMLReport.AddString("<h2>Отчёт о распределённой технике</h2>");
             easyHTMLReport.AddString("<h3>Дата отчёта: " + date + "</h3>");
-            DataTable dt = new DataTable();
-            easyHTMLReport.AddLineBreak();
-            easyHTMLReport.AddDatagridView(dgvAllocation);
-            easyHTMLReport.ShowPrintPreviewDialog();
+
+            int count = 0;
+            using (con = new SQLiteConnection(conStr))
+            using (cmd = new SQLiteCommand("SELECT sum(Count) FROM Allocation", con))
+            {
+                try
+                {
+                    con.Open();
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            count = Convert.ToInt32(reader[0].ToString());
+                        }
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+                easyHTMLReport.AddLineBreak();
+                easyHTMLReport.AddDatagridView(dgvAllocation);
+                easyHTMLReport.AddLineBreak();
+                easyHTMLReport.AddString("Количество распределённой техники: " + count + "<br>");
+                easyHTMLReport.ShowPrintPreviewDialog();
+            }
         }
 
         private void btnCancellReport1_Click(object sender, EventArgs e)
         {
             easyHTMLReport.Clear();
             easyHTMLReport.AddImage(img, "width = 15%, style = 'float: right'");
-            easyHTMLReport.AddString("<h1>КУП Институт Молодечнопроект</h1>");
+            easyHTMLReport.AddString("<h1>Организация</h1>");
             easyHTMLReport.AddString("<h2>Отчёт о списанной технике</h2>");
             easyHTMLReport.AddString("<h3>Дата отчёта: " + date + "</h3>");
-            DataTable dt = new DataTable();
-            easyHTMLReport.AddLineBreak();
-            easyHTMLReport.AddDatagridView(dgvCancellation);
-            easyHTMLReport.ShowPrintPreviewDialog();
+
+            int count = 0;
+            using (con = new SQLiteConnection(conStr))
+            using (cmd = new SQLiteCommand("SELECT sum(Count) FROM Cancellation", con))
+            {
+                try
+                {
+                    con.Open();
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            count = Convert.ToInt32(reader[0].ToString());
+                        }
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+
+                easyHTMLReport.AddLineBreak();
+                easyHTMLReport.AddDatagridView(dgvCancellation);
+                easyHTMLReport.AddLineBreak();
+                easyHTMLReport.AddString("Количество списанной техники: " + count + "<br>");
+                easyHTMLReport.ShowPrintPreviewDialog();
+            }
         }
 
         private void btnProvidersReport1_Click(object sender, EventArgs e)
         {
             easyHTMLReport.Clear();
             easyHTMLReport.AddImage(img, "width = 15%, style = 'float: right'");
-            easyHTMLReport.AddString("<h1>КУП Институт Молодечнопроект</h1>");
+            easyHTMLReport.AddString("<h1>Организация</h1>");
             easyHTMLReport.AddString("<h2>Отчёт о поставщиках</h2>");
             easyHTMLReport.AddString("<h3>Дата отчёта: " + date + "</h3>");
-            DataTable dt = new DataTable();
-            easyHTMLReport.AddLineBreak();
-            easyHTMLReport.AddDatagridView(dgvProviders);
-            easyHTMLReport.ShowPrintPreviewDialog();
+            int count = 0;
+            string name = null;
+            using (con = new SQLiteConnection(conStr))
+            using (cmd = new SQLiteCommand("SELECT P.NameProvider, count(E.CodeProvider) FROM Providers as P, Equipment as E " + 
+                "WHERE P.CodeProvider = E.CodeProvider GROUP BY E.CodeProvider", con))
+            {
+                try
+                {
+                    easyHTMLReport.AddLineBreak();
+                    easyHTMLReport.AddDatagridView(dgvProviders);
+                    easyHTMLReport.AddLineBreak();
+
+                    con.Open();
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            count = Convert.ToInt32(reader[1].ToString());
+                            name = reader[0].ToString();
+                            easyHTMLReport.AddString("Количество поставок от \"" + name + "\": " + count + "<br>");
+                        }
+                          
+                    easyHTMLReport.ShowPrintPreviewDialog();
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
         }
 
         private void btnEquipReport1_Click(object sender, EventArgs e)
         {
             easyHTMLReport.Clear();
             easyHTMLReport.AddImage(img, "width = 15%, style = 'float: right'");
-            easyHTMLReport.AddString("<h1>КУП Институт Молодечнопроект</h1>");
+            easyHTMLReport.AddString("<h1>Организация</h1>");
             easyHTMLReport.AddString("<h2>Отчёт о технике</h2>");
             easyHTMLReport.AddString("<h3>Дата отчёта: " + date + "</h3>");
-            DataTable dt = new DataTable();
+            int count = 0, sum = 0, totalPrice = 0;
+            using (con = new SQLiteConnection(conStr))
+            using (cmd = new SQLiteCommand("SELECT count(CodeEquip) FROM Equipment", con))
+            {
+                try
+                {
+                    con.Open();
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            count = Convert.ToInt32(reader[0].ToString());
+                        }
+
+                    cmd.CommandText = "SELECT sum(Count) FROM Equipment";
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            sum = Convert.ToInt32(reader[0].ToString());
+                        }
+
+                    cmd.CommandText = "SELECT Count, Price FROM Equipment";
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            totalPrice += Convert.ToInt32(reader[0].ToString()) * Convert.ToInt32(reader[1].ToString());
+                        }
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }
+            }
+
             easyHTMLReport.AddLineBreak();
-            //dt.Columns.Add("Название");
-            //dt.Columns.Add("Всего");
-            //dt.Columns.Add("Доступно");
-            //dt.Columns.Add("Описание");
-            //dt.Columns.Add("Дата покупки");
-            //dt.Columns.Add("Поставщик");
-            //easyHTMLReport.AddDataTable(dt);
             easyHTMLReport.AddDatagridView(dgvEquip);
+            easyHTMLReport.AddLineBreak();
+            easyHTMLReport.AddString("Всего наименований: " + count + "<br>");
+            easyHTMLReport.AddString("Всего техники: " + sum + "<br>");
+            easyHTMLReport.AddString("Общая стоимость: " + totalPrice + " руб.<br>");
             easyHTMLReport.ShowPrintPreviewDialog();
         }
 
         private void btnStaffReport1_Click_1(object sender, EventArgs e)
         {
-            easyHTMLReport.Clear();        
+            easyHTMLReport.Clear();
             easyHTMLReport.AddImage(img, "width = 15%, style = 'float: right'");
-            easyHTMLReport.AddString("<h1>КУП Институт Молодечнопроект</h1>");
+            easyHTMLReport.AddString("<h1>Организация</h1>");
             easyHTMLReport.AddString("<h2>Отчёт о сотрудниках</h2>");
             easyHTMLReport.AddString("<h3>Дата отчёта: " + date + "</h3>");
-            DataTable dt = new DataTable();
-            easyHTMLReport.AddLineBreak();
             easyHTMLReport.AddDatagridView(dgvEmployee);
-            easyHTMLReport.ShowPrintPreviewDialog();
+            easyHTMLReport.AddLineBreak();
+            int count = 0;
+            string name = null;
+            using (con = new SQLiteConnection(conStr))
+            using (cmd = new SQLiteCommand("SELECT S.NameEmployee, sum(A.Count) FROM Staff as S, Allocation as A " +
+                "WHERE S.CodeEmployee = A.CodeEmployee GROUP BY A.CodeEmployee", con))
+            {
+                try
+                {
+                    con.Open();
+                    using (reader = cmd.ExecuteReader())
+                        while (reader.Read())
+                        {
+                            count = Convert.ToInt32(reader[1].ToString());
+                            name = reader[0].ToString();
+                            easyHTMLReport.AddString("Количество техники у \"" + name + "\": " + count + "<br>");
+                        }
+
+                    easyHTMLReport.ShowPrintPreviewDialog();
+                }
+                catch (SQLiteException)
+                {
+                    throw;
+                }          
+                easyHTMLReport.ShowPrintPreviewDialog();
+            }
         }
 
         private void btnMinMenu_Click(object sender, EventArgs e)
